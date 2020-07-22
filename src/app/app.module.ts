@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {allAppRoutes} from './routes';
 
@@ -15,7 +16,8 @@ import {allAppRoutes} from './routes';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(allAppRoutes)
+    RouterModule.forRoot(allAppRoutes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

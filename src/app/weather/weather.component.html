@@ -1,3 +1,21 @@
-<p>
-  weather works!
-</p>
+<div class="container">
+  <div class="left">
+    search for weather:
+    <form [formGroup]="weatherSearchForm">
+      <div class="form-group">
+        <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation"
+          placeholder="Please input a Location"
+          formControlName="location"/>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-md">
+          Search for the weather</button>
+      </div>
+    </form>
+  </div>
+  <div class="right">
+    search results:
+
+  </div>
+
+</div>
