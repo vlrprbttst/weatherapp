@@ -1,7 +1,7 @@
 <div class="container">
   <div class="left">
     search for weather:
-    <form [formGroup]="weatherSearchForm">
+    <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
       <div class="form-group">
         <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation"
           placeholder="Please input a Location"

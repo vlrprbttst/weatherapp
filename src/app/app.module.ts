@@ -5,10 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ApixuService } from "./apixu.service";
 import {RouterModule} from '@angular/router';
 import {allAppRoutes} from './routes';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     WeatherComponent
@@ -17,9 +20,10 @@ import {allAppRoutes} from './routes';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(allAppRoutes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApixuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
