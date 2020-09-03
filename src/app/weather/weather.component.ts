@@ -10,6 +10,11 @@ import { ApixuService } from "../apixu.service";
 export class WeatherComponent implements OnInit {
   public weatherSearchForm: FormGroup;
   public weatherData: any;
+  searchText: string;
+
+  saveNewField(searchText) {
+    console.log("searched Text", searchText);
+  }
 
 
   constructor(

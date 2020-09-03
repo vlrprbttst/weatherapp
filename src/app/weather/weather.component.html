@@ -13,10 +13,11 @@
         aria-describedby="weatherLocation"
         placeholder="Please input a Location"
         formControlName="location"
+        [(ngModel)]="searchText"
       />
     </div>
     <div class="text-center">
-      <button type="submit" class="btn btn-success btn-md">
+      <button type="submit" class="btn btn-success btn-md" [disabled]="!searchText">
         Search for the weather
       </button>
     </div>
