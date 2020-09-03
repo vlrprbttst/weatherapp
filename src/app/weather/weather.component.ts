@@ -31,7 +31,7 @@ export class WeatherComponent implements OnInit {
   sendToAPIXU(formValues) {
     this.apixuService
       .getWeather(formValues.location)
-      .subscribe(data => this.weatherData = data)
+      .subscribe(data => this.weatherData = data),
       console.log(this.weatherData);
   }
 
