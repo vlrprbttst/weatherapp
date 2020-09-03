@@ -23,12 +23,12 @@
   </form>
   </div>
   <div class="right">
-    <p class="text-center">
-      test: {{ this.weatherData?.current.cloudcover
-      }} in {{ this.weatherData?.location.country}}.
+    <p class="text-center" *ngIf="weatherData">
+      Currently, the weather in <b>{{ this.weatherData?.location.name}}, {{ this.weatherData?.location.country}}</b> is:
+      <br><br>
+      <img src="{{ this.weatherData?.current.weather_icons}}"> <br>
+      {{ this.weatherData?.current.weather_descriptions}}
     </p>
-
-
   </div>
 
 </div>
