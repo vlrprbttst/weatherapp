@@ -1,4 +1,4 @@
-<div class="container">
+<div [className]="weatherData ? 'container post-load' : ' container before-load'">
   <div class="left">
     search for weather:
     <form
