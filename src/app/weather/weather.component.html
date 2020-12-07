@@ -1,6 +1,8 @@
 <div [className]="weatherData ? 'container post-load' : ' container before-load'">
   <div class="left">
-    search for weather:
+    <div class="left-text">
+      Search for a City:
+    </div>
     <form
     [formGroup]="weatherSearchForm"
     (ngSubmit)="sendToAPIXU(weatherSearchForm.value)"
@@ -20,19 +22,16 @@
       <button type="submit" class="btn btn-success btn-md" [disabled]="!searchText">
         Search for the weather
       </button>
-
-
-
     </div>
   </form>
   </div>
   <div class="right">
 
     <p class="text-center" *ngIf="weatherData">
-      Currently, the weather in <b>{{ this.weatherData?.location.name}}, {{ this.weatherData?.location.country}}</b> is:
+      If you look out the window in <b>{{ this.weatherData?.location.name}}, {{ this.weatherData?.location.country}}</b> you'll see {{ this.weatherData?.current.weather_descriptions}}
       <br><br>
       <img src="{{ this.weatherData?.current.weather_icons}}"> <br>
-      {{ this.weatherData?.current.weather_descriptions}}
+
     </p>
   </div>
 
